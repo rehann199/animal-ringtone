@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">Animal Ringtone system overview</title>
+  <desc id="d">A Flutter app with UI, state, repositories and services, native Android bridges, a Cloudflare Workers backend with object storage, and Firebase services.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1f17"/>
+      <stop offset="1" stop-color="#13261c"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e8f5ec; }
+      .h { font-size: 26px; font-weight: 700; }
+      .k { font-size: 13px; fill: #86b79a; letter-spacing: 1.5px; font-weight: 700; }
+      .b { font-size: 16px; }
+      .s { font-size: 14px; fill: #a5cdb4; }
+      .app { fill: #17402b; stroke: #3fae6a; stroke-width: 2; }
+      .nat { fill: #3a2b12; stroke: #d9a02b; stroke-width: 2; }
+      .cf  { fill: #3a2414; stroke: #e0802f; stroke-width: 2; }
+      .fb  { fill: #35300f; stroke: #e6c32f; stroke-width: 2; }
+      .box { fill: #1b3a29; stroke: #2f6f4a; stroke-width: 1.5; }
+      .arrow { stroke: #5fcf8c; stroke-width: 2; fill: none; marker-end: url(#a); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5fcf8c"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" rx="16" fill="url(#bg)"/>
+  <text x="40" y="52" class="h">Animal Ringtone: system overview</text>
+  <text x="40" y="78" class="s">Conceptual view. Component names describe responsibilities, not production identifiers.</text>
+
+  <!-- Flutter app -->
+  <rect x="40" y="110" width="620" height="440" rx="12" class="app"/>
+  <text x="60" y="140" class="k">FLUTTER APP (ANDROID + iOS)</text>
+
+  <rect x="60" y="156" width="580" height="62" rx="8" class="box"/>
+  <text x="76" y="182" class="b">UI: five-tab shell, player, library, posts, record, paywall</text>
+  <text x="76" y="204" class="s">go_router with a stateful tab shell · localised in 15 languages</text>
+
+  <rect x="60" y="230" width="580" height="62" rx="8" class="box"/>
+  <text x="76" y="256" class="b">State: Riverpod providers</text>
+  <text x="76" y="278" class="s">Reactive playback, downloads, premium, connectivity, sync</text>
+
+  <rect x="60" y="304" width="580" height="62" rx="8" class="box"/>
+  <text x="76" y="330" class="b">Repositories: local, HTTP, Firestore implementations</text>
+  <text x="76" y="352" class="s">Catalog: network → cache → bundled fallback</text>
+
+  <rect x="60" y="378" width="580" height="150" rx="8" class="box"/>
+  <text x="76" y="404" class="b">Services</text>
+  <text x="76" y="428" class="s">Audio player + play cache · Downloads · Set-as · Share</text>
+  <text x="76" y="450" class="s">Ads gate + remote config · Billing · Auth · Cloud sync</text>
+  <text x="76" y="472" class="s">Notifications · Analytics · Crash reporting · Deep links</text>
+  <text x="76" y="494" class="s">Recorder · Updates · Connectivity</text>
+
+  <!-- Native -->
+  <rect x="720" y="110" width="440" height="150" rx="12" class="nat"/>
+  <text x="740" y="140" class="k">ANDROID NATIVE (KOTLIN)</text>
+  <text x="740" y="170" class="b">MediaSession + media notification</text>
+  <text x="740" y="196" class="b">System ringtone / contact tone writer</text>
+  <text x="740" y="222" class="b">MediaStore export to Music</text>
+  <text x="740" y="246" class="s">via platform channels</text>
+
+  <!-- Cloudflare -->
+  <rect x="720" y="290" width="440" height="120" rx="12" class="cf"/>
+  <text x="740" y="320" class="k">CLOUDFLARE WORKERS (TYPESCRIPT)</text>
+  <text x="740" y="348" class="b">Catalog · range-aware audio streaming</text>
+  <text x="740" y="374" class="b">Posts API · Firebase token verification</text>
+  <text x="740" y="398" class="s">Object storage for audio files</text>
+
+  <!-- Firebase -->
+  <rect x="720" y="440" width="440" height="110" rx="12" class="fb"/>
+  <text x="740" y="470" class="k">FIREBASE</text>
+  <text x="740" y="498" class="b">Auth · Firestore · Messaging</text>
+  <text x="740" y="522" class="b">Analytics · Crashlytics · Performance</text>
+
+  <path d="M640 190 H720" class="arrow"/>
+  <path d="M640 420 C690 420 690 350 720 350" class="arrow"/>
+  <path d="M640 480 C690 480 690 495 720 495" class="arrow"/>
+</svg>
